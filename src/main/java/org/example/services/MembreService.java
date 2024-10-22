@@ -33,4 +33,8 @@ public class MembreService {
     public Membre update(Membre membre) {
         return membreRepository.save(membre);
     }
+
+    public Membre findByFirstname(String firstname) {
+        return membreRepository.findByFirstname(firstname);
+    }
 }

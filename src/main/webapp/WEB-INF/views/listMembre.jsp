@@ -28,13 +28,13 @@
     <c:forEach var="membre" items="${list}">
       <tr>
         <td>${membre.id}</td>
-        <td>${membre.numeroAdhesion}</td>
-        <td>${membre.nom}</td>
-        <td>${membre.prenom}</td>
-        <td>${membre.pieceIdentification}</td>
-        <td>${membre.nationalite}</td>
-        <td>${membre.dateAdhesion}</td>
-        <td>${membre.dateExpirationLicence}</td>
+        <td>${membre.adhesionNumber}</td>
+        <td>${membre.firstname}</td>
+        <td>${membre.lastname}</td>
+        <td>${membre.cin}</td>
+        <td>${membre.nationality}</td>
+        <td>${membre.adhessionDate}</td>
+        <td>${membre.expirationDateLicence}</td>
         <td class="d-flex justify-content-center align-items-center w-100">
           <a href="${pageContext.request.contextPath}/membres/edit/${membre.id}" class="btn btn-warning btn-sm me-5">Edit</a>
           <form action="${pageContext.request.contextPath}/delete" method="post">
@@ -46,6 +46,8 @@
     </c:forEach>
     </tbody>
   </table>
+
+  <h1>${mebre.cin}</h1>
   <a href="${pageContext.request.contextPath}/save" class="btn btn-primary">Add Membre</a>
 </div>
 

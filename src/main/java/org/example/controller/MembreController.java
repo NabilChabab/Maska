@@ -38,6 +38,8 @@ public class MembreController {
     public String list(Model model) {
         List<Membre> list = membreService.findAll();
         model.addAttribute("list", list);
+        Membre mebre = membreService.findByFirstname("Talon");
+        model.addAttribute("mebre", mebre);
         return "listMembre";
     }
 
@@ -46,8 +48,4 @@ public class MembreController {
         membreService.deleteById(id);
         return "redirect:/list";
     }
-
-
-
-
 }

@@ -20,21 +20,21 @@ public class Membre {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "numero_adhesion")
-    private String numeroAdhesion;
+    @Column(name = "adhesion_number")
+    private String adhesionNumber;
 
-    private String nom;
-    private String prenom;
+    private String firstname;
+    private String lastname;
 
-    @Column(name = "piece_identification")
-    private String pieceIdentification;
+    @Column(name = "cin")
+    private String cin;
 
-    private String nationalite;
+    private String nationality;
 
-    @Column(name = "date_adhesion")
-    private LocalDate dateAdhesion;
+    @Column(name = "adhession_date")
+    private LocalDate adhessionDate;
 
-    @Column(name = "date_expiration_licence")
-    private LocalDate dateExpirationLicence;
+    @Column(name = "expiration_date_licence")
+    private LocalDate expirationDateLicence;
 
 }

@@ -7,26 +7,19 @@
 <h2>Add Membre</h2>
 <a href="${pageContext.request.contextPath}/test">Test page</a>
 <form:form action="${pageContext.request.contextPath}/save" modelAttribute="membre" method="post">
-    <label for="numeroAdhesion">Numéro d'adhésion:</label>
-    <form:input path="numeroAdhesion" /><br/>
+    <form:input path="adhesionNumber" /><br/>
 
-    <label for="nom">Nom:</label>
-    <form:input path="nom" /><br/>
+    <form:input path="firstname" /><br/>
 
-    <label for="prenom">Prénom:</label>
-    <form:input path="prenom" /><br/>
+    <form:input path="lastname" /><br/>
 
-    <label for="pieceIdentification">Pièce d'identification:</label>
-    <form:input path="pieceIdentification" /><br/>
+    <form:input path="cin" /><br/>
 
-    <label for="nationalite">Nationalité:</label>
-    <form:input path="nationalite" /><br/>
+    <form:input path="nationality" /><br/>
 
-    <label for="dateAdhesion">Date d'adhésion:</label>
-    <form:input path="dateAdhesion" type="date" /><br/>
+    <form:input path="adhessionDate" type="date" /><br/>
 
-    <label for="dateExpirationLicence">Date d'expiration de la licence:</label>
-    <form:input path="dateExpirationLicence" type="date" /><br/>
+    <form:input path="expirationDateLicence" type="date" /><br/>
 
     <input type="submit" value="Save" />
 </form:form>
