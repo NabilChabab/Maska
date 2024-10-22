@@ -22,7 +22,7 @@ public class MembreController {
     private MembreService membreService;
 
 
-    @GetMapping("/index")
+    @GetMapping("/save")
     public String index(Model model) {
         model.addAttribute("membre", new Membre());
         return "addMembre";
@@ -31,7 +31,7 @@ public class MembreController {
     @PostMapping("/save")
     public String save(@ModelAttribute("membre") Membre membre) {
         membreService.save(membre);
-        return "redirect:/index";
+        return "redirect:/list";
     }
 
     @GetMapping("/list")
@@ -39,6 +39,12 @@ public class MembreController {
         List<Membre> list = membreService.findAll();
         model.addAttribute("list", list);
         return "listMembre";
+    }
+
+    @PostMapping("/delete")
+    public String delete(@RequestParam("id") Long id) {
+        membreService.deleteById(id);
+        return "redirect:/list";
     }
 
 
