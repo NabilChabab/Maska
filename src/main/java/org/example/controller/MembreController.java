@@ -34,5 +34,14 @@ public class MembreController {
         return "redirect:/index";
     }
 
+    @GetMapping("/list")
+    public String list(Model model) {
+        List<Membre> list = membreService.findAll();
+        model.addAttribute("list", list);
+        return "listMembre";
+    }
+
+
+
 
 }
