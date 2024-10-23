@@ -10,8 +10,11 @@ import java.util.List;
 @Service
 public class MembreService {
 
-    @Autowired
     private MembreRepository membreRepository;
+
+    public MembreService(MembreRepository membreRepository) {
+        this.membreRepository = membreRepository;
+    }
 
 
     public List<Membre> findAll() {
