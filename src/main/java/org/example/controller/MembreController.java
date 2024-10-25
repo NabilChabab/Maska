@@ -19,11 +19,8 @@ import java.util.List;
 public class MembreController {
 
 
+    @Autowired
     private MembreService membreService;
-
-    public MembreController(MembreService membreService){
-        this.membreService = membreService;
-    }
 
 
     @GetMapping("/save")
